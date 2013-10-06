@@ -7,7 +7,7 @@
 </p>
 
 <% if @article.image.exists? %>
-	<p><%= image_tag @article.image.url %></p>
+	<p><%= image_tag @article.image.url(:medium) %></p>
 <% end %>
 
 <p><%= @article.body %></p>
@@ -24,3 +24,4 @@
 
 </br>
 <%= link_to "<< Back to Articles List", articles_path %>
+
